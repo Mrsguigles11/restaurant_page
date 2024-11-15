@@ -10,7 +10,7 @@
 :root {
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
-    color: rgb(61, 57, 57);
+    --text_colour: rgb(61, 57, 57);
 }
 
 body {
@@ -37,13 +37,13 @@ h1 {
 
 button {
     font-family: inherit;
-    background-color: rgb(255, 247, 236);
+    background-color: inherit;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     font-style: italic;
     font-weight: 500;
-    color: rgb(61, 57, 57);
+    color: var(--text_colour);
 }
 
 .content_nav {
@@ -55,18 +55,21 @@ button {
 }
 
 header {
+    box-sizing: border-box;
     position: fixed;
     left: 0;
     top: 40px;
     width: 100vw;
-    padding-left: 10px;
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-img {
+#chat_icon {
     height: 30px;
 }
 
-.image_container {
+.chat_button_container, .menu_button_container {
     background-color: pink;
     display: flex;
     justify-content: center;
@@ -76,7 +79,7 @@ img {
    cursor: pointer;
 }
 
-.header_nav {
+.header_nav, .header_buttons {
     display: flex;
     column-gap: 15px;
     align-items: center;
@@ -97,4 +100,27 @@ img {
     border-radius: 50%;
     width: 30px;
     padding: 8px;
+}
+
+#book_button {
+    font-style: normal;
+    font-size: 1rem;
+    border: 1.5px solid var(--text_colour);
+    padding: 5px 10px;
+    height: 32px;
+}
+
+.menu_button_container {
+    height: 30px;
+    width: 30px;
+    background-color: inherit;
+    border: 1.5px solid var(--text_colour);
+}
+
+#menu_button {
+    height: 20px;
+}
+
+#book_button:hover, .menu_button_container:hover {
+    background-color: pink;
 }
