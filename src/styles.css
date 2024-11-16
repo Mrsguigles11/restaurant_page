@@ -148,7 +148,7 @@ header {
 
 .about_content {
     display: grid;
-    grid-template: 1fr 1fr / auto 1fr;
+    grid-template: 1fr 1fr 1fr/ auto 1fr;
     gap: 10px 30px;
     padding-top: 20px;
 }
@@ -160,4 +160,10 @@ header {
 
 .about_bio {
     place-self: center;
+}
+
+.restaraunt_details_wrapper {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
