@@ -1,6 +1,43 @@
+import chefImageImport from "../img/chefImage.jpg";
+import ownerImageImport from "../img/ownerImage.jpg";
 export {aboutContent};
 
 function aboutContent () {
     const content = document.querySelector("#content");
-    content.textContent = `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.`
+    content.innerHTML = '';
+    const aboutContent = document.createElement('div');
+    content.appendChild(aboutContent);
+    aboutContent.setAttribute('class', 'about_content');
+    const chefImage = document.createElement('img');
+    chefImage.src = chefImageImport;
+    chefImage.setAttribute('class', 'about_image');
+    aboutContent.appendChild(chefImage);
+    const chefBioWrapper = document.createElement('div');
+    chefBioWrapper.setAttribute('class', 'about_bio');
+    aboutContent.appendChild(chefBioWrapper);
+    const chefBio = document.createElement('div');
+    chefBio.textContent = "Hi I'm Woody! Chef of Woodys and all round good guy. Please contact me here:";
+    chefBioWrapper.appendChild(chefBio);
+    const chefEmail = document.createElement('p');
+    chefEmail.textContent = "woody@emailaddress.com";
+    chefBioWrapper.appendChild(chefEmail);
+    const chefPhoneNo = document.createElement('p');
+    chefPhoneNo.textContent = "+44 0000 00000";
+    chefBioWrapper.appendChild(chefPhoneNo);
+    const ownerImage = document.createElement('img');
+    ownerImage.src = ownerImageImport;
+    ownerImage.setAttribute('class', 'about_image');
+    aboutContent.appendChild(ownerImage);
+    const ownerBioWrapper = document.createElement("div");
+    ownerBioWrapper.setAttribute('class', 'about_bio');
+    aboutContent.appendChild(ownerBioWrapper);
+    const ownerBio = document.createElement('div');
+    ownerBio.textContent = "Hi im Derek! I part own the restaurant with Woody and would love to hear your feedback and suggestions here:";
+    ownerBioWrapper.appendChild(ownerBio);
+    const ownerEmail = document.createElement('p');
+    ownerEmail.textContent = "derek@emailaddress.com";
+    ownerBioWrapper.appendChild(ownerEmail);
+    const ownerPhoneNo = document.createElement('p');
+    ownerPhoneNo.textContent = "+44 0000 00000";
+    ownerBioWrapper.appendChild(ownerPhoneNo);
 }
