@@ -59,7 +59,7 @@ header {
     box-sizing: border-box;
     position: fixed;
     left: 0;
-    top: 40px;
+    top: 30px;
     width: 100vw;
     padding: 0px 10px 0px 10px;
     display: flex;
@@ -137,7 +137,7 @@ header {
 .home_pictures_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
+    margin: 40px 0px;
     box-sizing: border-box;
     width: 95%;
 }
@@ -156,14 +156,25 @@ header {
 .about_image {
     height: 30vh;
     width: 12vw;
+    align-self: center;
 }
 
 .about_bio {
-    place-self: center;
+    place-self: center start;
+    width: 100%;
+}
+
+.details_wrappers {
+    justify-self: center;
 }
 
 .restaraunt_details_wrapper {
     grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 10px 0px;
+}
+
+.restaurant_details_content, .about_bio {
+    white-space: pre-wrap;
 }
