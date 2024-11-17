@@ -20,6 +20,7 @@ body {
     align-items: center;
     background-color: rgb(255, 247, 236);
     padding-top: 15vh;
+    scrollbar-gutter: stable;
 }
 
 #content {
