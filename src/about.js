@@ -20,7 +20,7 @@ function aboutContent () {
     ownerImage.setAttribute('class', 'about_image');
     const ownerBio = document.createElement('div');
     ownerBio.setAttribute('class', 'about_bio');
-    ownerBio.textContent = "Hi im Derek! I part own the restaurant with Woody\nand would love to hear your feedback and\nsuggestions here:\nderek@emailaddress.com\n+44 0000 00000";
+    ownerBio.textContent = "Hi im Derek! I part own the restaurant with Woody and would love to hear your feedback and suggestions here:\nderek@emailaddress.com\n+44 0000 00000";
     aboutContent.append(ownerImage, ownerBio);
     const restaurantDetailsWrapper = document.createElement('div');
     restaurantDetailsWrapper.setAttribute('class', 'restaraunt_details_wrapper');
